@@ -1,9 +1,11 @@
 from flask import Flask, render_template, jsonify, request, make_response
+from flask_cors import CORS
 from rdflib import Graph
 
 import Constants
 
 app = Flask(__name__)
+CORS(app)
 
 graph = Graph()
 graph.parse("./Ontology/ontology.xml",format="xml")
