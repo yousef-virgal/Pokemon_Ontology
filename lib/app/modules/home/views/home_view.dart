@@ -40,7 +40,7 @@ class HomeView extends GetView<HomeController> {
               ),
               Obx(
                     () => Container(
-                  height: controller.noResponse ? Get.height * 0.8 : Get.height * 0.30,
+                  height: controller.noResponse ? Get.height * 0.6 : Get.height * 0.30,
                   child: Center(
                     child: Container(
                       padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.1),
@@ -122,6 +122,15 @@ class HomeView extends GetView<HomeController> {
                       width: Get.width * 0.8,
                       height: Get.height * 0.8,
                       child: QueryTable());
+                if(controller.askQueryResponse.value != null)
+                  return Container(
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.blueGrey, width: 2),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Text("Result: ${controller.askQueryResponse.value}"),
+                  );
                 return SizedBox();
               }),
 
