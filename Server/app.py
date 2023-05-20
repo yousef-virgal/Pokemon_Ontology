@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 graph = Graph()
-graph.parse("./Ontology/ontology.xml",format="xml")
+graph.parse("../PokemonOntology.rdf",format="xml")
 
 @app.route("/")
 def index():
