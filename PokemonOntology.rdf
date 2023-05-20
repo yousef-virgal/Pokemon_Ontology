@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:pokemonontology="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology"/>
     
 
@@ -41,17 +42,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#describes_Pokemon -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#describes_Pokemon">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#features_species"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#describes_pokemon -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#describes_pokemon">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#features_species"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokedex_Entry"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Species"/>
     </owl:ObjectProperty>
@@ -215,6 +209,7 @@
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#colour -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#colour">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -566,6 +561,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#levelupmovelearning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#levelupmovelearning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Learning_By_Leveling_Up"/>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -574,6 +577,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Alex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Alex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Town"/>
+    </owl:NamedIndividual>
     
 
 
@@ -625,10 +636,40 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Cairo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Cairo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Town"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Cave -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Cave">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Habitat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Chinese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Chinese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Species"/>
+        <pokemonontology:evolves_from rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Egyptian"/>
+        <pokemonontology:evolves_to rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Greek"/>
+        <pokemonontology:found_in rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Mountain"/>
+        <pokemonontology:in_egg_group rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Dragon"/>
+        <pokemonontology:in_egg_group rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Fairy"/>
+        <pokemonontology:may_have_ability rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Invincible"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Colored_Ball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Colored_Ball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Poke_Ball"/>
     </owl:NamedIndividual>
     
 
@@ -658,10 +699,56 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#EU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#EU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Region"/>
+        <pokemonontology:contains_place rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#London"/>
+        <pokemonontology:contains_place rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Easy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Easy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Game"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Egyptian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Egyptian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Species"/>
+        <pokemonontology:evolves_from rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Greek"/>
+        <pokemonontology:evolves_to rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Chinese"/>
+        <pokemonontology:found_in rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Sea"/>
+        <pokemonontology:found_in rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Urban"/>
+        <pokemonontology:has_shape rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Fish"/>
+        <pokemonontology:has_shape rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Heads"/>
+        <pokemonontology:has_shape rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Humanoid"/>
+        <pokemonontology:in_egg_group rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Flying"/>
+        <pokemonontology:in_egg_group rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Human-like"/>
+        <pokemonontology:may_have_ability rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Super_Powers"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Electric -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Electric">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Escelate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Escelate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Status_Move"/>
+        <pokemonontology:learns_move rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Escelate"/>
+        <pokemonontology:learns_move rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#transport"/>
     </owl:NamedIndividual>
     
 
@@ -699,6 +786,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#First -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#First">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Generation"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Fish -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Fish">
@@ -712,6 +807,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Flying">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Egg_Group"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Fruits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Fruits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Food"/>
+        <pokemonontology:has_flavor rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#sweet"/>
     </owl:NamedIndividual>
     
 
@@ -741,10 +845,36 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Greek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Greek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Species"/>
+        <pokemonontology:evolves_from rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Chinese"/>
+        <pokemonontology:evolves_to rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Egyptian"/>
+        <pokemonontology:found_in rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Grass"/>
+        <pokemonontology:found_in rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Sea"/>
+        <pokemonontology:has_shape rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Armor"/>
+        <pokemonontology:has_shape rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Heads"/>
+        <pokemonontology:has_shape rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Legs"/>
+        <pokemonontology:has_shape rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#wings"/>
+        <pokemonontology:in_egg_group rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Mineral"/>
+        <pokemonontology:in_egg_group rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Monster"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Ground -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Ground">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Hard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Hard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Game"/>
     </owl:NamedIndividual>
     
 
@@ -781,10 +911,53 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Invincible -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Invincible">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Ability"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Legs -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Legs">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#London -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#London">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Town"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#MENA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#MENA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Region"/>
+        <pokemonontology:contains_place rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Alex"/>
+        <pokemonontology:contains_place rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Cairo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Mahmoud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Mahmoud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokedex_Entry"/>
+        <pokemonontology:describes_pokemon rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Greek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Mahmouds_Pokemon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Mahmouds_Pokemon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokemon"/>
     </owl:NamedIndividual>
     
 
@@ -813,6 +986,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#NYC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#NYC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Town"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#No_Eggs_Discovered -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#No_Eggs_Discovered">
@@ -829,10 +1010,43 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Omar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Omar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokedex_Entry"/>
+        <pokemonontology:describes_pokemon rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Egyptian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Omars_Pokemon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Omars_Pokemon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokemon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Town"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Poison -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Poison">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokemon_Gym -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokemon_Gym">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Gym"/>
     </owl:NamedIndividual>
     
 
@@ -885,6 +1099,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Second -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Second">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Generation"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Shadow -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Shadow">
@@ -901,10 +1123,46 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Steak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Steak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Food"/>
+        <pokemonontology:has_flavor rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#bitter"/>
+        <pokemonontology:has_flavor rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#sour"/>
+        <pokemonontology:has_flavor rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#spicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Super_Powers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Super_Powers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Ability"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Tentacles -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Tentacles">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#The_Master_Leader -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#The_Master_Leader">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Gym_Leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#US -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#US">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Region"/>
+        <pokemonontology:contains_place rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#NYC"/>
     </owl:NamedIndividual>
     
 
@@ -957,10 +1215,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Youssef -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Youssef">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokedex_Entry"/>
+        <pokemonontology:describes_pokemon rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Chinese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Youssefs_Pokemon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Youssefs_Pokemon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Pokemon"/>
+        <pokemonontology:colour>Red</pokemonontology:colour>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#bitter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#bitter">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Flavor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#breedingmovelearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#breedingmovelearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Learning_Through_Breeding"/>
+        <pokemonontology:learns_move rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#jump"/>
+        <pokemonontology:learns_move rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#run"/>
     </owl:NamedIndividual>
     
 
@@ -978,6 +1264,38 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#dry">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Flavor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#jump -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#jump">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Physical_Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#pain_killer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#pain_killer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Medicine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#pills -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#pills">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Medicine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#run -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#run">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Physical_Move"/>
     </owl:NamedIndividual>
     
 
@@ -1010,6 +1328,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#sweet">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Flavor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#transport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#transport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Special_Move"/>
     </owl:NamedIndividual>
     
 
