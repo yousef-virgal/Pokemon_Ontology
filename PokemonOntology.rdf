@@ -640,6 +640,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Cairo">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Town"/>
+        <pokemonontology:located_in rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#MENA"/>
     </owl:NamedIndividual>
     
 
@@ -990,6 +991,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#NYC">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Town"/>
+        <pokemonontology:located_in rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#US"/>
     </owl:NamedIndividual>
     
 
@@ -1031,6 +1033,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Paris">
         <rdf:type rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#Town"/>
+        <pokemonontology:located_in rdf:resource="http://www.semanticweb.org/omar/ontologies/2023/4/pokemonontology#EU"/>
     </owl:NamedIndividual>
     
 
